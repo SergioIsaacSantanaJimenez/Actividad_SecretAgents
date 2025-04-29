@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Correos</title>
+</head>
+<body>
+  <h1>Correos</h1>
+  <p>Agente: <span class="agent-code"></span></p>
+  
+  <a href="/email/compose">Nuevo Mensaje</a>
+  <button id="inbox-btn">Recibidos</button>
+  <button id="sent-btn">Enviados</button>
+  
+  <h2 id="email-section-title">Bandeja de Entrada</h2>
+  
+  <table border="1">
+    <thead>
+      <tr>
+        <th id="sender-header">Remitente</th>
+        <th>Asunto</th>
+        <th>Fecha</th>
+      </tr>
+    </thead>
+    <tbody id="email-table-body">
+      <tr>
+        <td colspan="3">Cargando...</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <script src="/assets/email.js"></script>
+</body>
+</html>

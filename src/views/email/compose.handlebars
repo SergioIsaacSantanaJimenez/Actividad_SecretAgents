@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Nuevo Mensaje</title>
+</head>
+<body>
+  <h1>Nuevo Mensaje</h1>
+  <p>Agente: <span class="agent-code"></span></p>
+  
+  <form id="emailForm">
+    <input type="hidden" id="sender" name="sender">
+    
+    <label>Para:</label><br>
+    <input type="text" id="recipient" name="recipient" required><br><br>
+    
+    <label>Asunto:</label><br>
+    <input type="text" id="subject" name="subject" required><br><br>
+    
+    <label>Mensaje:</label><br>
+    <textarea id="content" name="content" rows="5" cols="40" required></textarea><br><br>
+    
+    <label>Contraseña:</label><br>
+    <input type="password" id="password" name="password" required><br>
+    <small>Esta contraseña desencripta el mensaje</small><br><br>
+    
+    <a href="/email">Cancelar</a>
+    <button type="submit">Enviar</button>
+  </form>
+  
+  <script src="/assets/email.js"></script>
+</body>
+</html>

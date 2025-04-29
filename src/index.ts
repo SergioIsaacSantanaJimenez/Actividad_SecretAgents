@@ -64,15 +64,16 @@ const uri = process.env.DB_URL;
 
 if (uri) {
     connect(uri).then(() => {
-        app.listen(port, () => {
+        // Usar httpServer en lugar de app.listen para que Socket.IO funcione
+        httpServer.listen(port, () => {
             console.log(`app is running in port ${port}`);
         });
     }).catch(e => {
         console.log('Failed to connect to mongodb', e);
     })
 } else {
-    app.listen(port, () => {
+    // Usar httpServer en lugar de app.listen
+    httpServer.listen(port, () => {
         console.log(`app is running in port ${port} without database`);
     });
 }
-

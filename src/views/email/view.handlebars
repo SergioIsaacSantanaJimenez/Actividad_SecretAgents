@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ver Mensaje</title>
+</head>
+<body>
+  <h1>Ver Mensaje</h1>
+  <p>Agente: <span class="agent-code"></span></p>
+  
+  <input type="hidden" id="emailId" value="{{emailId}}">
+  
+  <h2 id="emailSubject">Cargando...</h2>
+  <p><strong>De:</strong> <span id="emailSender"></span></p>
+  <p><strong>Para:</strong> <span id="emailRecipient"></span></p>
+  <p><strong>Fecha:</strong> <span id="emailDate"></span></p>
+  
+  <div id="decryptionArea">
+    <p>Mensaje encriptado</p>
+    <input type="password" id="decryptPassword" placeholder="Contraseña">
+    <button id="decryptBtn">Desencriptar</button>
+  </div>
+  
+  <div id="contentArea" style="display:none;">
+    <h3>Mensaje:</h3>
+    <pre id="emailContent"></pre>
+  </div>
+  
+  <p><a href="/email">Volver</a></p>
+  
+  <script src="/assets/email.js"></script>
+</body>
+</html>
