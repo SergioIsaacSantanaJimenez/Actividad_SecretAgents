@@ -1,0 +1,21 @@
+
+<h2>Subir archivo a la misión</h2>
+
+<form action="/files/upload" method="POST" enctype="multipart/form-data">
+  <div>
+    <label for="file">Selecciona un archivo (.txt, .pdf, .jpg, .png):</label><br />
+    <input type="file" name="file" id="file" required />
+  </div>
+  <br />
+  <button type="submit">📤 Subir archivo</button>
+</form>
+
+{{#if key}}
+  <div>
+    <h4>Archivo subido correctamente:</h4>
+    <p><strong>Clave S3:</strong> {{key}}</p>
+    <p><a href="{{url}}" target="_blank">Ver / Descargar</a></p>
+  </div>
+{{/if}}
+
+<a href="/">🔙 Volver al inicio</a>
