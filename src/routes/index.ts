@@ -7,6 +7,14 @@ router.get('', (req, res) => {
     res.render('index');
 })
 
+
+// Página de chat
+router.get('/chat', (req, res) => {
+    const user = 'Agente 007'; 
+    const chatName = 'Chat Secreto';
+    res.render('chat', { user, chatName });
+});
+
 router.get('/test', (req, res) => {
     sendEmail(
         'your-user@gmail.com', 
